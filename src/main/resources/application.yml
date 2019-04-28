@@ -1,0 +1,18 @@
+spring:
+    datasource:
+        driverclassname: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/test_axon?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+        username: axon
+        password: password
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        hibernate:
+            ddl-auto: update
+
+---
+spring:
+    profiles: container
+    datasource:
+        url: jdbc:mysql://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+        username: ${DATABASE_USER}
+        password: ${DATABASE_PASSWORD}
