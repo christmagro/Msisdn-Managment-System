@@ -18,7 +18,7 @@ This is a basic fully functional Rest Api to Manage Mobile Services
 - Get Msisdn details by entityId
 - List all Msisdn details matching search 
 
-### Querying
+### Historical Event Querying
 - List all historical events for MSISDN (including pre terminations and post terminations)
 - List all historical events for EntityId (From start till termination)
 
